@@ -82,7 +82,7 @@ function logout () {
         },
     };
 
-    fetch(apiBaseURL + "/auth/logout", options)
+    fetch(apiBaseURL + "/auth/logout", options) 
         .then(response => response.json())
         .then(data => console.log(data))
         .finally(() => {
