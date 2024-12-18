@@ -1,9 +1,7 @@
 "use strict";
 
-
 const createPostForm = document.getElementById("createPostForm");
 const logoutButton = document.getElementById("logoutButton");
-
 
 createPostForm.addEventListener("submit", async (event) => { // adds an event listener to the form for when the user submits a new post
   event.preventDefault(); // reloads the page
@@ -39,5 +37,37 @@ createPostForm.addEventListener("submit", async (event) => { // adds an event li
   } catch (error) {
     console.error("Error creating post:", error);
     alert("An error occurred while creating the post. Please try again.");
+  }
+});
+
+"use strict";
+
+document.addEventListener("DOMContentLoaded", async function () { // THIS DYNAMICALLY updates the user's profile card
+  const fullName = document.getElementById("fullName");
+  const username = document.getElementById("username");
+  const bio = document.getElementById("bio");
+
+  const loginData = getLoginData();
+
+  try {
+    const response = await fetch(`http://localhost:5005/api/users/${loginData.username}`, {
+      headers: {
+        Authorization: `Bearer ${loginData.token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch user details: ${response.status}`);
+    }
+
+    const userData = await response.json(); 
+    console.log(userData); // DEBUGGING THIS
+
+    fullName.textContent = userData.fullName || "Full Name Not Provided";
+    username.textContent = `@${userData.username}` || "@username";
+    bio.textContent = userData.bio || "This user has not written a bio yet.";
+  } catch (error) {
+    console.error("Error fetching user details:", error);
+    alert("Failed to load user details. Please try again.");
   }
 });

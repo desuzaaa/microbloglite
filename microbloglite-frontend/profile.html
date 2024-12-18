@@ -46,15 +46,26 @@
   </header>
 
   <main class="container mt-4">
-    <section id="createPostSection">
+
+    <section id="createPostSection"> <!-- added section for clearer code -->
       <h2>Create a Post</h2>
       <form id="createPostForm">
         <div class="mb-3">
-          <textarea id="postContent" class="form-control" rows="3" placeholder="Write your post here..." required></textarea>
+          <textarea id="postContent" class="form-control" rows="3" placeholder="What's on your mind?" required></textarea>
         </div>
         <button type="submit" class="btn btn-success">Post</button>
       </form>
     </section>
+
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title" id="fullName">Full Name</h5>
+    <h6 class="card-subtitle mb-2 text-muted" id="username">@username</h6>
+    <hr>
+    <p class="card-text" id="bio">User bio goes here...</p>
+  </div>
+</div>
+
   </main>
 
     <footer>
