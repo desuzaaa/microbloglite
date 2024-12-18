@@ -1,1 +1,103 @@
 /* Landing Page CSS */
+  .welcome-text {
+      font-family: Arial, sans-serif;
+      font-size: 3rem;
+      color: white;
+      font-weight: 400;
+    }
+
+    body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #121212;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-custom {
+            margin-bottom: 1rem;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-google {
+            background-color: #ffffff;
+            color: #000;
+            border: 1px solid #d1d1d1;
+        }
+
+        .btn-apple {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #d1d1d1;
+        }
+
+        .divider {
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #6c757d;
+        }
+
+        .divider span {
+            margin: 0 10px;
+            color: #6c757d;
+        }
+
+        p a {
+            color: #1da1f2;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        
+      h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-family: 'DM Serif Text', serif; 
+      }
+
+      h1::before {
+        content: "Welcome to";
+        display: block;
+        color: #fff;
+        font-size: 2.5rem;
+        font-family: 'Montserrat', serif;
+      }
+
+      h1::after {
+        content: "Ruby";
+        display: block;
+        font-family: 'Playball', cursive; 
+        font-size: 4rem;
+        color: #ac012e; 
+        text-shadow:
+       
+          1px 1px 0 #fff;   
+      }
+
