@@ -11,7 +11,9 @@
     <!--  global and page-specifc CSS -->
     <link href="styles/global.css" rel="stylesheet" />
     <link href="styles/landing.css" rel="stylesheet" />
+    
 
+    <!-- run before anything -->
     <script src="scripts/auth.js"></script>
 
   </head>
@@ -21,7 +23,7 @@
         <h1></h1>
         <p class="mb-4">Create your account</p>
 
-        <form id="registerForm" onsubmit="registerUser(event)">
+        <form id="registerForm" onsubmit="createUser(event)">
           <div class="mb-3 text-start">
             <label for="fullName" class="form-label">Full Name</label>
             <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required />

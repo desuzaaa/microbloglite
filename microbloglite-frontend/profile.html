@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Page Title -->
-    <title>Welcome to your profile!</title>
+    <title>Welcome to Your Profile!</title>
 
     <!-- bootstrap CSS -->
     <link
@@ -15,60 +15,100 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <!-- font awesome for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <!-- global CSS -->
     <link rel="stylesheet" href="styles/global.css" />
 
     <!-- page-specific CSS -->
     <link rel="stylesheet" href="styles/profile.css" />
+    <link rel="stylesheet" href="styles/posts.css" />
 
-    <!-- Run AFTER the page is loaded: -->
+    <!-- Run BEFORE page is finished loading -->
     <script src="scripts/auth.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // If the user is NOT logged in, redirect back to the landing page (index.html)
-        if (isLoggedIn() === false) window.location.replace("index.html");
-      });
-    </script>
-</head>
+  </head>
+  <body>
+    <main class="container">
+      <div class="profile-container">
 
-<body>
-   <header class="d-flex justify-content-between align-items-center p-3 bg-light">
-    <h1>Profile Page</h1>
-    <nav>
-      <a href="posts.html" class="btn btn-primary me-2">Go to Posts</a>
-      <button id="logoutButton" class="btn btn-danger" onclick="logout()">Logout</button>
-    </nav>
-  </header>
-
-  <main class="container mt-4">
-
-    <section id="createPostSection"> <!-- added section for clearer code -->
-      <h2>Create a Post</h2>
-      <form id="createPostForm">
-        <div class="mb-3">
-          <textarea id="postContent" class="form-control" rows="3" placeholder="What's on your mind?" required></textarea>
+        <!-- create a profile card-->
+        <div class="card mb-5">
+          <div class="card-body">
+            <h5 class="card-title" id="fullName">Full Name</h5>
+            <h6 class="card-subtitle mb-2" id="username">@username</h6>
+            <hr />
+            <p class="card-text" id="bio">User bio goes here...</p>
+          </div>
         </div>
-        <button type="submit" class="btn btn-success">Post</button>
-      </form>
-    </section>
 
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title" id="fullName">Full Name</h5>
-    <h6 class="card-subtitle mb-2 text-muted" id="username">@username</h6>
-    <hr>
-    <p class="card-text" id="bio">User bio goes here...</p>
-  </div>
-</div>
+        <!-- text input to create posts -->
+        <div id="createPostSection">
+          <h2>Create a Post</h2>
+          <form id="createPostForm">
+            <div class="mb-3">
+              <textarea
+                id="postContent"
+                class="form-control"
+                rows="3"
+                placeholder="What's on your mind?"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom mb-5">Post</button>
+          </form>
+        </div>
 
-  </main>
+        <!-- list of posts -->
+        <div id="postsList">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Post Title A</h5>
+              <p class="card-text">Content of the post goes here...</p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Post Title B</h5>
+              <p class="card-text">Content of the post goes here...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
+    <!-- left sidebar -->
+    <div class="col-3 sidebar">
+      <div class="mb-4">
+        <img src="images/rubylogo.png" alt="Hexagon Logo" style="width: 200px; height: 150px" />
+      </div>
+      <a href="index.html" class="sidebar-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i class="fas fa-hashtag"></i>
+        <span>Explore</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i class="fas fa-bell"></i>
+        <span>Notifications</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i class="fas fa-envelope"></i>
+        <span>Messages</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i class="fas fa-bookmark"></i>
+        <span>Bookmarks</span>
+      </a>
+      <a href="profile.html" class="sidebar-item">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </a>
+      <button id="logoutButton" class="btn btn-custom mt-3 rounded" onclick="logout()">Logout</button>
+    </div>
 
-    <!-- Page-specific code -->
     <script src="scripts/profile.js"></script>
-</body>
+  </body>
 </html>

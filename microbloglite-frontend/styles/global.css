@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playball&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playball&display=swap");
 
 /* Global CSS for all pages */
 
@@ -20,7 +19,7 @@
   font-size: 1rem;
 }
 
-body {
+/* body {
  background-image: url("../images/rubybackground.jpg");       
   background-size: cover; 
   background-repeat: no-repeat; 
@@ -44,4 +43,45 @@ body {
 
   .btn-custom:hover {
     background-color: #4d0114 !important; 
+  } */
+
+body {
+  height: 100vh;
+  /* background: linear-gradient(-45deg, red, black, grey); */
+  background-image: url("../images/rubybackground.jpg");
+  background-size: 150% 150%;
+  animation: bg 12s ease infinite;
+  background-position: center center; 
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Montserrat", serif !important;
+  font-weight: 400;
+  font-style: normal;
+      
+}
+
+@keyframes bg {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn-custom {
+    background-color: #ac012e ; 
+    color: #fff ; 
+    border: none ; 
+  }
+
+  .btn-custom:hover {
+    background-color: #4d0114 !important; 
+  } 

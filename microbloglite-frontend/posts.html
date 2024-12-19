@@ -16,22 +16,20 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/posts.css" />
 
+    <!-- Run BEFORE page is finished loading -->
     <script src="scripts/auth.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        if (isLoggedIn() === false) window.location.replace("index.html");
-      });
-    </script>
+    
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
+
         <!-- left sidebar -->
         <div class="col-3 sidebar">
           <div class="mb-4">
             <img src="images/rubylogo.png" alt="Hexagon Logo" style="width: 200px; height: 150px" />
           </div>
-          <a href="#" class="sidebar-item">
+          <a href="index.html" class="sidebar-item">
             <i class="fas fa-home"></i>
             <span>Home</span>
           </a>
