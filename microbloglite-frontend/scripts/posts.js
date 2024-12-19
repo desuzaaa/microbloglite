@@ -3,6 +3,11 @@
 
 const main = document.querySelector("main");
 
+function getLoginData() { // added from auth.js so i wouldnt get errors in vscode
+  const loginJSON = window.localStorage.getItem("login-data");
+  return JSON.parse(loginJSON) || {};
+}
+
 
 async function getPosts() {
   const loginData = getLoginData(); // get the token from auth.js (putting this here so i dont forget)
@@ -50,6 +55,7 @@ function showPostCards(post) { // creates the cards
     postsContainer.append(card); 
   }
 }
+
 
 
 document.addEventListener("DOMContentLoaded", getPosts); // load the posts on page load

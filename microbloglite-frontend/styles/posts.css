@@ -1,1 +1,114 @@
 /* Posts Page CSS */
+.sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding-top: 20px;
+}
+
+.sidebar-item {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(155, 0, 36, 0.201);
+  border-radius: 25px;
+  color: white;
+}
+
+.main-content {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  min-height: 100vh;
+}
+
+.post-input {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+}
+
+.trends-card {
+  background-color: #f7f9f9;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.trend-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.trend-item:last-child {
+  border-bottom: none;
+}
+
+.hashtags {
+    color: #ac012e;
+}
+
+.trends-for-you {
+    color: rgb(255, 255, 255);
+    font-family: 'Playball', cursive; 
+}
+
+.trending {
+    color: #ffffff;
+}
+
+.jewels {
+    color: #ffffff;
+}
+
+.right-sidebar .sidebar {
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
+}
+.right-sidebar .sidebar-item {
+    color: white; 
+    transition: background-color 0.3s ease;
+}
+
+.right-sidebar .sidebar-item:hover {
+    background-color: rgba(20, 20, 20, 0.1); 
+    border-radius: 25px;
+    color: white;
+}
+
+
+.right-sidebar .trends-card {
+    background-color: #202020; 
+    color: #cb0000; 
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 4px #000000
+}
+
+.right-sidebar .trend-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #4a4a4a; 
+}
+
+.right-sidebar .trend-item:last-child {
+    border-bottom: none;
+}
+
+#postsContainer .card {
+    background-color: #202020; 
+    color: #fff; 
+    border: none; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 15px; 
+}
+
+#postsContainer .card * {
+    color: #fff !important; 
+}

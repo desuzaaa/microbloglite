@@ -21,7 +21,10 @@
 }
 
 body {
-        background-color: #000;
+ background-image: url("../images/rubybackground.jpg");       
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center; 
         color: #fff;
         height: 100vh;
         display: flex;
