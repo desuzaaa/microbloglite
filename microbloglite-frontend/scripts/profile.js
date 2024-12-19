@@ -40,7 +40,13 @@ createPostForm.addEventListener("submit", async (event) => { // adds an event li
   }
 });
 
-"use strict";
+function getLoginData() {
+  // added from auth.js so i wouldnt get errors in vscode
+  const loginJSON = window.localStorage.getItem("login-data");
+  return JSON.parse(loginJSON) || {};
+}
+
+
 
 document.addEventListener("DOMContentLoaded", async function () { // THIS DYNAMICALLY updates the user's profile card
   const fullName = document.getElementById("fullName");
