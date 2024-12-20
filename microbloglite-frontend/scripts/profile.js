@@ -41,7 +41,7 @@ async function getPosts() {
   }
 }
 
-// smaller function to create post HTML element
+// smaller function to create div HTML element
 function createPostElement(post) {
   const postDiv = document.createElement("div");
   postDiv.className = "card mb-3";
