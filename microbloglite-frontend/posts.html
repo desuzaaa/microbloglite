@@ -19,6 +19,10 @@
     <!-- Run BEFORE page is finished loading -->
     <script src="scripts/auth.js"></script>
     
+    <script>
+      // If the user IS logged in, redirect to posts.html
+      if (isLoggedIn() === false) window.location.replace("index.html");
+    </script>
   </head>
   <body>
     <div class="container-fluid">
